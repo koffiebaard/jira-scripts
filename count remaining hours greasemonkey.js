@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        Jira hour-count
-// @namespace   jira_hour_count
-// @include     *jira.hotelspecials.nl/secure/IssueNavigator*
+// @name        Jira uren
+// @namespace   jira_commit_comment
+// @include     *jira.*.nl/secure/IssueNavigator*
 // @version     1
 // @grant       none
 // ==/UserScript==
@@ -22,7 +22,7 @@ for (var c = 0; c < elements.length; c++)
         
         if ( results !== null )
         {
-            hours = hours + parseInt(results[1] * 8);
+            hours = hours + parseFloat(results[1] * 8);
         }
     }
     if (time.indexOf("hour") || time.indexOf("hours"))
@@ -32,7 +32,7 @@ for (var c = 0; c < elements.length; c++)
         
         if ( results !== null )
         {
-            hours = hours + parseInt(results[1]);
+            hours = hours + parseFloat(results[1]);
         }
     }
     if (time.indexOf("week") || time.indexOf("weeks"))
@@ -42,7 +42,7 @@ for (var c = 0; c < elements.length; c++)
         
         if ( results !== null )
         {
-            hours = hours + parseInt(results[1] * 40);
+            hours = hours + parseFloat(results[1] * 40);
         }
     }
     if (time.indexOf("minute") || time.indexOf("minutes"))
@@ -52,7 +52,7 @@ for (var c = 0; c < elements.length; c++)
         
         if ( results !== null )
         {
-            hours = hours + parseInt(results[1] / 60);
+            hours = hours + parseFloat(results[1] / 60);
         }
     }
 }
@@ -66,5 +66,5 @@ function appendHTML(el, str) {
   }
 }
 
-appendHTML(document.body, '<ul id="hour_estimate_woot" style="background-color: #fff; position: fixed; top: 0px; right: 650px; z-index: 10000; border-radius: 0px 0px 10px 10px; background: -moz-linear-gradient(center top , #fff, #ededed) repeat scroll 0 0 transparent; padding: 10px; box-shadow: 2px 2px 2px #666"><li style="list-style-type: none; padding: 5px; font-size: 15px; font-weight: bold">Uur aantal</li><li style="list-style-type: none; padding: 5px;">' + hours + '</li></ul>');
+appendHTML(document.body, '<ul id="hour_estimate_woot" style="background-color: #fff; position: fixed; top: 0px; left: 322px; z-index: 10000; border-radius: 0px 0px 10px 10px; background: -moz-linear-gradient(center top , #fff, #ededed) repeat scroll 0 0 transparent; padding: 10px; box-shadow: 2px 2px 2px #666"><li style="list-style-type: none; padding: 5px; font-size: 15px; font-weight: bold">Uur aantal</li><li style="list-style-type: none; padding: 5px;">' + hours + '</li></ul>');
 
