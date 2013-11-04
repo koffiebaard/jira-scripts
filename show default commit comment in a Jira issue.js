@@ -2,7 +2,7 @@
 // @name        Commit comment
 // @namespace   jira_commit_comment
 // @description jira commit comment
-// @include     *jira.*.nl/browse/*
+// @include     *jira.*.nl/browse*
 // @version     1
 // @grant       none
 // ==/UserScript==
