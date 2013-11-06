@@ -10,7 +10,7 @@
 
 var elem_issue_nr = document.getElementById('key-val');
 
-if(elem_issue_nr && elem_issue_nr.hasOwnProperty('text'))
+if(elem_issue_nr)
 {
 	var issue_nr = elem_issue_nr.text;
 	var elem_issue_title_container = document.getElementById('issue_header_summary');
