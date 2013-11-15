@@ -15,6 +15,7 @@ if(elem_issue_nr && elem_issue_nr.hasOwnProperty('text'))
 	var issue_nr = elem_issue_nr.text;
 	var elem_issue_title_container = document.getElementById('issue_header_summary');
 	var issue_title = elem_issue_title_container.children[0].text;
+	issue_title = issue_title.replace(/"/g, "'");
 
 	var onclick = "javascript:var content = document.getElementById('cc'); content.focus(); content.select();";
 	var style_ul = 'margin-right: 303px; background-color: #fff; position: fixed; top: 0px; right: 10px; z-index: 10000; border-radius: 0px 0px 10px 10px; background: -moz-linear-gradient(center top , #fff, #ededed) repeat scroll 0 0 transparent; padding: 10px; box-shadow: 2px 2px 2px #666';
