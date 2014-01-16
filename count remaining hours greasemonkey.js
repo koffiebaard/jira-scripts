@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Jira uren
 // @namespace   jira_commit_comment
-// @include     *jira.*.nl/secure/IssueNavigator*
+// @include     *jira.*/issues/*
 // @version     1
 // @grant       none
 // ==/UserScript==
@@ -66,5 +66,5 @@ function appendHTML(el, str) {
   }
 }
 
-appendHTML(document.body, '<ul id="hour_estimate_woot" style="background-color: #fff; position: fixed; top: 0px; left: 322px; z-index: 10000; border-radius: 0px 0px 10px 10px; background: -moz-linear-gradient(center top , #fff, #ededed) repeat scroll 0 0 transparent; padding: 10px; box-shadow: 2px 2px 2px #666"><li style="list-style-type: none; padding: 5px; font-size: 15px; font-weight: bold">Uur aantal</li><li style="list-style-type: none; padding: 5px;">' + hours + '</li></ul>');
+appendHTML(document.body, '<ul id="hour_estimate_woot" style="background-color: #fff; position: fixed; top: -12px; left: 575px; z-index: 10000; border-radius: 0px 0px 10px 10px; background: -moz-linear-gradient(center top , #fff, #ededed) repeat scroll 0 0 transparent; padding: 10px; box-shadow: 2px 2px 2px #666"><li style="list-style-type: none; padding: 5px; font-size: 15px; font-weight: bold">Uur aantal</li><li style="list-style-type: none; padding: 5px;">' + hours + '</li></ul>');
 
